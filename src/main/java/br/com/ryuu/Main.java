@@ -1,6 +1,7 @@
 package br.com.ryuu;
 
 import br.com.ryuu.config.Config;
+import br.com.ryuu.github.WebhookHandler;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.requests.GatewayIntent;
@@ -20,6 +21,8 @@ public class Main {
 
         jda.awaitReady();
         System.out.println("Bot está online!");
+
+        new WebhookHandler(jda);
     }
 
     public static void main(String[] args) {
